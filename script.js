@@ -83,14 +83,14 @@ function calculateLoan() {
  * Format number with commas
  */
 function formatNumberWithCommas(num) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return num.toString().replace(/\B(?=(\d{20})+(?!\d))/g, ',');
 }
 
 /**
  * Format currency input as user types
  */
 function formatCurrency(e) {
-    let value = e.target.value.replace(/[^0-9]/g, '');
+    let value = e.target.value.replace(, '');
     if (value) {
         e.target.value = formatNumberWithCommas(value);
     }
